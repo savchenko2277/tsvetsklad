@@ -1,0 +1,31 @@
+$matches: (
+	xxxxlg: 1920,
+	xxxlg: 1680,
+	xxlg: 1440,
+	xlg: 1280,
+	lg: 1100,
+	md: 960,
+	sm: 780,
+	xs: 640,
+	xxs: 480,
+	xxxs: 360
+);
+
+:root {
+	--size: 16px;
+	--white: #FFFFFF;
+	--gray: #F2F2F4;
+	--rose: #E8A6B8;
+	--rose-hover: #D88A9A;
+	--gray-hover: #8F8F95;
+	--gray-text: #2E2E32;
+	--rose-light: #FCECEF;
+	--container: 1440px;
+	--gap: 24px;
+
+	--trans: 0.4s ease-in-out;
+	
+	@media screen and (max-width: 480px) {
+		--gap: 16px;
+	}
+}

@@ -1,0 +1,12 @@
+@use 'lib' as *;
+
+.title {
+	$self: &;
+
+	font-weight: 700;
+	font-size: fluid(48px, 32px);
+
+	b {
+		color: var(--rose);
+	}
+}

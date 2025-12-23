@@ -1,0 +1,49 @@
+@@include("_head.html", {"id":"home"})
+@@include("_header.html")
+
+<main class="site-container">
+    <section class="detail">
+        <div class="detail__container container">
+            <div class="detail__gallery">
+                <div class="detail__gallery-main">
+                    <img class="hidden" src="" alt="">
+                    <div class="detail__gallery-navigation">
+                        <button class="detail__gallery-btn detail__gallery-btn_prev">
+                            <svg>
+                                <use xlink:href="#arrow-left"></use>
+                            </svg>
+                        </button>
+                        <button class="detail__gallery-btn detail__gallery-btn_next">
+                            <svg>
+                                <use xlink:href="#arrow-left"></use>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+                <div class="detail__gallery-items swiper">
+                    <div class="swiper-wrapper">
+                        <img src="./img/catalog/1.webp" alt="" class="swiper-slide">
+                        <img src="./img/catalog/2.webp" alt="" class="swiper-slide">
+                        <img src="./img/catalog/3.webp" alt="" class="swiper-slide">
+                        <img src="./img/catalog/4.webp" alt="" class="swiper-slide">
+                        <img src="./img/catalog/1.webp" alt="" class="swiper-slide">
+                        <img src="./img/catalog/2.webp" alt="" class="swiper-slide">
+                        <img src="./img/catalog/3.webp" alt="" class="swiper-slide">
+                        <img src="./img/catalog/4.webp" alt="" class="swiper-slide">
+                    </div>
+                </div>
+            </div>
+            <div class="detail__about">
+                <h4 class="detail__title">Романтический букет</h4>
+                <div class="detail__text">
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Modi iure consequuntur exercitationem.
+                    </p>
+                </div>
+                <p class="detail__price">6 000 ₽</p>
+                <button class="detail__btn">В корзину</button>
+            </div>
+        </div>
+    </section>
+</main>
+
+@@include("_bottom.html")

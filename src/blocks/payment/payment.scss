@@ -1,0 +1,190 @@
+@use 'lib' as *;
+
+.payment {
+	$self: &;
+
+	&__container {
+
+	}
+
+	&__title {
+		margin-bottom: 32px;
+	}
+
+	&__form {
+		display: grid;
+		gap: 48px;
+	}
+
+	&__info {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: 16px;
+		max-width: 720px;
+
+		textarea {
+			grid-column: span 2;
+		}
+
+		input {
+			@include media("<=xs") {
+				grid-column: span 2;
+			}
+		}
+	}
+
+	&__list {
+		background: var(--gray);
+		padding: 12px 24px;
+		border-radius: 16px;
+		font-size: 18px;
+	}
+
+	&__input {
+		background: var(--gray);
+		padding: 12px 24px;
+		border-radius: 16px;
+		font-size: 18px;
+	}
+
+	&__show {
+
+	}
+
+	&__items-title {
+		margin-bottom: 24px;
+		font-size: fluid(28px, 24px);
+		font-weight: 700;
+	}
+
+	&__items.basket__items {
+		margin-bottom: 0;
+	}
+
+	&__delivery {
+
+	}
+
+	&__delivery-title {
+		margin-bottom: 24px;
+		font-size: fluid(28px, 24px);
+		font-weight: 700;
+	}
+
+	&__delivery-types {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: 12px;
+		max-width: 240px;
+		margin-bottom: 24px;
+
+		@include media("<=xs") {
+			max-width: none;
+		}
+	}
+
+	&__delivery-type {
+		@include flex-center;
+		background: var(--gray);
+		padding: 16px 32px;
+		border-radius: 16px;
+		font-weight: 700;
+		border: 2px solid transparent;
+		cursor: pointer;
+
+		&:has(input:checked) {
+			border-color: var(--rose);
+		}
+
+		input {
+			display: none;
+			appearance: none;
+		}
+	}
+
+	&__courier {
+		
+	}
+
+	&__types {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: 12px;
+		max-width: 460px;
+
+		@include media("<=xs") {
+			max-width: none;
+		}
+	}
+
+	&__type {
+		@include flex-center;
+		text-align: center;
+		flex-direction: column;
+		background: var(--gray);
+		padding: 16px 32px;
+		border-radius: 16px;
+		font-weight: 700;
+		border: 2px solid transparent;
+		cursor: pointer;
+
+		img {
+			width: 80px;
+		}
+
+		&:has(input:checked) {
+			border-color: var(--rose);
+		}
+
+		input {
+			display: none;
+			appearance: none;
+		}
+	}
+
+	&__button {
+		width: fit-content;
+		font-size: 20px;
+		line-height: 100%;
+		padding: 20px 48px;
+		border-radius: 16px;
+		color: var(--white);
+		font-weight: 700;
+		background: var(--rose-hover);
+		cursor: pointer;
+
+		@include media("<=xs") {
+			width: 100%;
+		}
+	}
+
+	&__lists {
+	}
+
+	&__list {
+		display: none;
+		max-width: 460px;
+		width: 100%;
+		stroke: none;
+		border: none;
+		outline: none;
+		&.active {
+			display: block;
+		}
+
+		@include media("<=xs") {
+			max-width: none;
+		}
+	}
+
+	&__price {
+		font-size: 20px;
+		font-weight: 500;
+		margin-bottom: 24px;
+
+		b {
+			font-weight: 700;
+		}
+	}
+
+}

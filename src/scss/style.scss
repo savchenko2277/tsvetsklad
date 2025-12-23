@@ -1,0 +1,52 @@
+@use 'lib' as * with(
+	$breakpoints: (
+		'xxxs': 360px,
+		'xxs': 480px,
+		'xs': 640px,
+		'sm': 780px,
+		'md': 960px,
+		'lg': 1100px,
+		'xlg': 1280px,
+		'xxlg': 1440px,
+		'xxxlg': 1680px,
+		'xxxxlg': 1928px
+	)
+);
+
+@use "../blocks/**/*.scss";
+
+@use "../../node_modules/swiper/swiper";
+
+// Подключение шрифтов
+
+// @include font-face("filename", "name", value);
+
+body {
+	&.disable-scroll {
+		overflow: hidden;
+	}
+}
+
+body, html {
+	background-color: var(--white);
+	font-size: var(--size);
+	color: var(--text);
+	font-family: "Inter", sans-serif;
+	line-height: 1.2;
+	font-weight: 400;
+	display: flex;
+	flex-flow: column nowrap;
+	min-height: 100vh;
+}
+
+.footer {
+	flex: 0 0 auto; 
+	margin-top: auto; 
+}
+
+.sprite {
+	display: none;
+}
+
+em { font-style: italic; }
+strong { font-weight: bold; }

@@ -1,0 +1,133 @@
+@use 'lib' as *;
+
+.detail {
+	$self: &;
+
+	padding-top: 200px;
+	padding-bottom: fluid(120px, 60px);
+
+	&__container {
+		display: grid;
+		grid-template-columns: minmax(300px, 560px) minmax(400px, 1fr);
+		gap: 48px;
+
+		@include media("<=sm") {
+			grid-template-columns: 100%;
+		}
+	}
+
+	&__gallery {
+
+	}
+
+	&__gallery-main {
+		width: 100%;
+		aspect-ratio: 1 / 1;
+		border-radius: 16px;
+		overflow: hidden;
+		margin-bottom: 16px;
+		position: relative;
+
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+
+			&.hidden {
+				display: none;
+			}
+		}
+	}
+
+	&__gallery-items {
+		position: relative;
+		.swiper-slide {
+			cursor: pointer;
+			aspect-ratio: 1 / 1;
+			border-radius: 16px;
+			overflow: hidden;
+			object-fit: cover;
+
+			&.swiper-slide-active {
+				padding: 8px;
+				border: 4px solid var(--rose);
+			}
+		}
+	}
+
+	&__about {
+		display: flex;
+		flex-direction: column;
+		gap: 24px;
+	}
+
+	&__title {
+		font-weight: 700;
+		font-size: fluid(48px, 32px);
+	}
+
+	&__text {
+		font-size: 18px;
+		max-width: 640px;
+	}
+
+	&__price {
+		font-size: fluid(32px, 22px);
+	}
+
+	&__btn {
+		width: fit-content;
+		line-height: 100%;
+		padding: 16px 32px;
+		border-radius: 16px;
+		background: var(--rose-hover);
+		font-size: 18px;
+		font-weight: 700;
+		color: var(--white);
+
+		@include media("<=xs") {
+			width: 100%;
+		}
+	}
+
+	&__gallery-navigation {
+		position: absolute;
+		top: 50%; left: 0;
+		transform: translateY(-50%);
+		padding: 0px 8px;
+		width: 100%;
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: space-between;
+		z-index: 10;
+		pointer-events: none;
+
+		@include media("<=lg") {
+			
+		}
+	}
+
+	&__gallery-btn {
+		@include flex-center;
+		width: fluid(56px, 48px); height: fluid(56px, 48px);
+		background: var(--rose);
+		border-radius: fluid(16px, 8px);
+		pointer-events: all;
+		cursor: pointer;
+		z-index: 2;
+
+		svg {
+			width: fluid(36px, 32px);
+			height: fluid(36px, 32px);
+			stroke: var(--white);
+		}
+
+		&_next {
+			svg {
+				transform: rotate(180deg);
+			}
+		}
+	}
+
+}

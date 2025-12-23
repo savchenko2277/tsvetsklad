@@ -1,0 +1,128 @@
+@use 'lib' as *;
+
+.footer {
+	$self: &;
+
+
+	padding: fluid(90px, 45px) 0;
+	background: var(--gray);
+
+	&__container {
+		display: grid;
+		grid-template-columns: repeat(3, auto);
+		gap: 48px;
+		justify-content: space-between;
+
+		@include media("<=xlg") {
+			grid-template-columns: repeat(2, 1fr);
+		}
+
+		@include media("<=md") {
+			grid-template-columns: 100%;
+		}
+	}
+
+	&__side {
+
+		&_left {
+			
+		}
+
+		&_right {
+			display: flex;
+			flex-direction: row;
+			gap: 48px;
+			align-items: end;
+		}
+	}
+
+	&__logo {
+		width: 160px;
+		display: block;
+		margin-bottom: 24px;
+
+		img {
+			width: 100%;
+			object-fit: contain;
+		}
+	}
+
+	&__adreess {
+		display: block;
+		font-weight: 500;
+		font-size: 20px;
+		max-width: 260px;
+		line-height: 150%;
+	}
+
+	&__list {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: 16px;
+		height: fit-content;
+
+		@include media("<=xs") {
+			grid-template-columns: 100%;
+		}
+	}
+
+	&__list-item {
+		font-weight: 500;
+		transition: all var(--trans);
+
+		&:hover {
+			color: var(--rose-hover);
+		}
+	}
+
+	&__contacts {
+		display: flex;
+		flex-direction: column;
+		gap: 16px;
+	}
+
+	&__contact {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		gap: 8px;
+		font-weight: 500;
+		font-size: 20px;
+		transition: all var(--trans);
+
+		svg {
+			width: 24px; height: 28px;
+			fill: var(--gray-text);
+			transition: all var(--trans);
+		}
+
+		&:hover {
+			color: var(--rose-hover);
+
+			svg {
+				fill: var(--rose-hover);
+			}
+		}
+	}
+
+	&__socials {
+		display: flex;
+		flex-direction: row;
+		gap: 8px;
+	}
+
+	&__social {
+		svg {
+			width: 24px; height: 24px;
+			fill: var(--gray-text);
+			transition: all var(--trans);
+		}
+
+		&:hover {
+			svg {
+				fill: var(--rose-hover);
+			}
+		}
+	}
+
+}

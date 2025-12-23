@@ -1,0 +1,57 @@
+@use 'lib' as *;
+
+.categories {
+	$self: &;
+
+	padding: fluid(64px, 32px) 0;
+
+	&__container {
+
+	}
+
+	&__title {
+		margin-bottom: 24px;
+	}
+
+	&__items {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: fluid(24px, 8px);
+
+		@include media("<=md") {
+			grid-template-columns: repeat(2, 1fr);
+		}
+	}
+
+	&__item {
+		width: 100%;
+		aspect-ratio: 16 / 9;
+		border-radius: 16px;
+		position: relative;
+		overflow: hidden;
+
+		&:hover {
+			#{$self}__item-img {
+				transform: scale(1.1);
+			}
+		}
+	}
+
+	&__item-title {
+		color: var(--dark-text);
+		position: absolute;
+		top: fluid(32px, 20px); left: fluid(32px, 20px);
+		font-size: fluid(32px, 16px);
+		font-weight: 500;
+		max-width: 50%;
+	}
+
+	&__item-img {
+		position: absolute;
+		bottom: -25%;
+		right: -20%;
+		width: fluid(70%, 60%);
+		transition: all var(--trans);
+	}
+
+}

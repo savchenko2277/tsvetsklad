@@ -1,0 +1,367 @@
+@@include("_head.html", {"id":"home"})
+@@include("_header.html")
+
+<main class="site-container">
+    <section class="promo">
+        <div class="promo__container container">
+            <div class="promo__swiper swiper">
+                <div class="swiper-wrapper">
+                    <div class="promo__slide swiper-slide">
+                        <img src="./img/promo/1.webp" alt="">
+                    </div>
+                    <div class="promo__slide swiper-slide">
+                        <img src="./img/promo/2.webp" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="categories">
+        <div class="categories__container container">
+            <h2 class="categories__title title">Категории</h2>
+            <div class="categories__items">
+                <a style="background: #F6D7DF;" href="#" class="categories__item">
+                    <h4 class="categories__item-title">Цветы</h4>
+                    <img loading="lazy" src="./img/cveti.webp" alt="" class="categories__item-img">
+                </a>
+                <a style="background: #F8E3D2;" href="#" class="categories__item">
+                    <h4 class="categories__item-title">Мягкие игрушки</h4>
+                    <img loading="lazy" src="./img/mishka.webp" alt="" class="categories__item-img">
+                </a>
+                <a style="background: #E3B1BF;" href="#" class="categories__item">
+                    <h4 class="categories__item-title">Комнатные растения</h4>
+                    <img loading="lazy" src="./img/rastenie.webp" alt="" class="categories__item-img">
+                </a>
+            </div>
+        </div>
+    </section>
+    <section class="catalog-row">
+        <div class="catalog-row__container container">
+            <div class="catalog-row__up">
+                <h2 class="catalog-row__title title">Популярные букеты</h2>
+                <a href="#" class="catalog-row__more">
+                    <span>Показать ещё</span>
+                    <svg>
+                        <use xlink:href="#arrow-up-right"></use>
+                    </svg>
+                </a>
+            </div>
+            <div class="catalog-row__items swiper">
+                <div class="swiper-wrapper">
+                    <a href="#" class="card-item swiper-slide is-liked">
+                        <div class="card-item__image">
+                            <img loading="lazy" src="./img/catalog/1.webp" alt="" class="card-item__img">
+                        </div>
+                        <div class="card-item__content">
+                            <h4 class="card-item__title">Романтический букет</h4>
+                            <div class="card-item__bottom">
+                                <p class="card-item__price">6 000 ₽</p>
+                                <button type="button" class="card-item__cart">
+                                    <span>В корзину</span>
+                                    <svg><use xlink:href="#basket"></use></svg>
+                                </button>
+                            </div>
+                        </div>
+                        <button type="button" class="card-item__like"><svg><use xlink:href="#heart"></use></svg></button>
+                    </a>
+                    <a href="#" class="card-item swiper-slide">
+                        <div class="card-item__image">
+                            <img loading="lazy" src="./img/catalog/2.webp" alt="" class="card-item__img">
+                        </div>
+                        <div class="card-item__content">
+                            <h4 class="card-item__title">Романтический букет с свечами</h4>
+                            <div class="card-item__bottom">
+                                <p class="card-item__price">6 000 ₽</p>
+                                <button type="button" class="card-item__cart">
+                                    <span>В корзину</span>
+                                    <svg><use xlink:href="#basket"></use></svg>
+                                </button>
+                            </div>
+                        </div>
+                        <button type="button" class="card-item__like"><svg><use xlink:href="#heart"></use></svg></button>
+                    </a>
+                    <a href="#" class="card-item swiper-slide">
+                        <div class="card-item__image">
+                            <img loading="lazy" src="./img/catalog/3.webp" alt="" class="card-item__img">
+                        </div>
+                        <div class="card-item__content">
+                            <h4 class="card-item__title">Романтический букет без свеч</h4>
+                            <div class="card-item__bottom">
+                                <p class="card-item__price">6 000 ₽</p>
+                                <button type="button" class="card-item__cart">
+                                    <span>В корзину</span>
+                                    <svg><use xlink:href="#basket"></use></svg>
+                                </button>
+                            </div>
+                        </div>
+                        <button type="button" class="card-item__like"><svg><use xlink:href="#heart"></use></svg></button>
+                    </a>
+                    <a href="#" class="card-item swiper-slide">
+                        <div class="card-item__image">
+                            <img loading="lazy" src="./img/catalog/4.webp" alt="" class="card-item__img">
+                        </div>
+                        <div class="card-item__content">
+                            <h4 class="card-item__title">Романтический букет с розами</h4>
+                            <div class="card-item__bottom">
+                                <p class="card-item__price">6 000 ₽</p>
+                                <button type="button" class="card-item__cart">
+                                    <span>В корзину</span>
+                                    <svg><use xlink:href="#basket"></use></svg>
+                                </button>
+                            </div>
+                        </div>
+                        <button type="button" class="card-item__like"><svg><use xlink:href="#heart"></use></svg></button>
+                    </a>
+                    <a href="#" class="card-item swiper-slide">
+                        <div class="card-item__image">
+                            <img loading="lazy" src="./img/catalog/3.webp" alt="" class="card-item__img">
+                        </div>
+                        <div class="card-item__content">
+                            <h4 class="card-item__title">Романтический букет без свеч</h4>
+                            <div class="card-item__bottom">
+                                <p class="card-item__price">6 000 ₽</p>
+                                <button type="button" class="card-item__cart">
+                                    <span>В корзину</span>
+                                    <svg><use xlink:href="#basket"></use></svg>
+                                </button>
+                            </div>
+                        </div>
+                        <button type="button" class="card-item__like"><svg><use xlink:href="#heart"></use></svg></button>
+                    </a>
+                </div>
+                <div class="catalog-row__navigation">
+                    <button type="button" class="catalog-row__navigation-btn catalog-row__navigation-btn_prev">
+                        <svg>
+                            <use xlink:href="#arrow-left"></use>
+                        </svg>
+                    </button>
+                    <button type="button" class="catalog-row__navigation-btn catalog-row__navigation-btn_next">
+                        <svg>
+                            <use xlink:href="#arrow-left"></use>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="catalog-row">
+        <div class="catalog-row__container container">
+            <div class="catalog-row__up">
+                <h2 class="catalog-row__title title">Красивые букеты с <b>оформлением</b></h2>
+                <a href="#" class="catalog-row__more">
+                    <span>Показать ещё</span>
+                    <svg>
+                        <use xlink:href="#arrow-up-right"></use>
+                    </svg>
+                </a>
+            </div>
+            <div class="catalog-row__items swiper">
+                <div class="swiper-wrapper">
+                    <a href="#" class="card-item swiper-slide">
+                        <div class="card-item__image">
+                            <img loading="lazy" src="./img/catalog/2.webp" alt="" class="card-item__img">
+                        </div>
+                        <div class="card-item__content">
+                            <h4 class="card-item__title">Романтический букет</h4>
+                            <div class="card-item__bottom">
+                                <p class="card-item__price">6 000 ₽</p>
+                                <button type="button" class="card-item__cart">
+                                    <span>В корзину</span>
+                                    <svg><use xlink:href="#basket"></use></svg>
+                                </button>
+                            </div>
+                        </div>
+                        <button type="button" class="card-item__like"><svg><use xlink:href="#heart"></use></svg></button>
+                    </a>
+                    <a href="#" class="card-item swiper-slide">
+                        <div class="card-item__image">
+                            <img loading="lazy" src="./img/catalog/4.webp" alt="" class="card-item__img">
+                        </div>
+                        <div class="card-item__content">
+                            <h4 class="card-item__title">Романтический букет с свечами</h4>
+                            <div class="card-item__bottom">
+                                <p class="card-item__price">6 000 ₽</p>
+                                <button type="button" class="card-item__cart">
+                                    <span>В корзину</span>
+                                    <svg><use xlink:href="#basket"></use></svg>
+                                </button>
+                            </div>
+                        </div>
+                        <button type="button" class="card-item__like"><svg><use xlink:href="#heart"></use></svg></button>
+                    </a>
+                    <a href="#" class="card-item swiper-slide">
+                        <div class="card-item__image">
+                            <img loading="lazy" src="./img/catalog/1.webp" alt="" class="card-item__img">
+                        </div>
+                        <div class="card-item__content">
+                            <h4 class="card-item__title">Романтический букет без свеч</h4>
+                            <div class="card-item__bottom">
+                                <p class="card-item__price">6 000 ₽</p>
+                                <button type="button" class="card-item__cart">
+                                    <span>В корзину</span>
+                                    <svg><use xlink:href="#basket"></use></svg>
+                                </button>
+                            </div>
+                        </div>
+                        <button type="button" class="card-item__like"><svg><use xlink:href="#heart"></use></svg></button>
+                    </a>
+                    <a href="#" class="card-item swiper-slide">
+                        <div class="card-item__image">
+                            <img loading="lazy" src="./img/catalog/3.webp" alt="" class="card-item__img">
+                        </div>
+                        <div class="card-item__content">
+                            <h4 class="card-item__title">Романтический букет с розами</h4>
+                            <div class="card-item__bottom">
+                                <p class="card-item__price">6 000 ₽</p>
+                                <button type="button" class="card-item__cart">
+                                    <span>В корзину</span>
+                                    <svg><use xlink:href="#basket"></use></svg>
+                                </button>
+                            </div>
+                        </div>
+                        <button type="button" class="card-item__like"><svg><use xlink:href="#heart"></use></svg></button>
+                    </a>
+                    <a href="#" class="card-item swiper-slide">
+                        <div class="card-item__image">
+                            <img loading="lazy" src="./img/catalog/1.webp" alt="" class="card-item__img">
+                        </div>
+                        <div class="card-item__content">
+                            <h4 class="card-item__title">Романтический букет без свеч</h4>
+                            <div class="card-item__bottom">
+                                <p class="card-item__price">6 000 ₽</p>
+                                <button type="button" class="card-item__cart">
+                                    <span>В корзину</span>
+                                    <svg><use xlink:href="#basket"></use></svg>
+                                </button>
+                            </div>
+                        </div>
+                        <button type="button" class="card-item__like"><svg><use xlink:href="#heart"></use></svg></button>
+                    </a>
+                </div>
+                <div class="catalog-row__navigation">
+                    <button type="button" class="catalog-row__navigation-btn catalog-row__navigation-btn_prev">
+                        <svg>
+                            <use xlink:href="#arrow-left"></use>
+                        </svg>
+                    </button>
+                    <button type="button" class="catalog-row__navigation-btn catalog-row__navigation-btn_next">
+                        <svg>
+                            <use xlink:href="#arrow-left"></use>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="catalog-row">
+        <div class="catalog-row__container container">
+            <div class="catalog-row__up">
+                <h2 class="catalog-row__title title">Красивые букеты</h2>
+                <a href="#" class="catalog-row__more">
+                    <span>Показать ещё</span>
+                    <svg>
+                        <use xlink:href="#arrow-up-right"></use>
+                    </svg>
+                </a>
+            </div>
+            <div class="catalog-row__items swiper">
+                <div class="swiper-wrapper">
+                    <a href="#" class="card-item swiper-slide">
+                        <div class="card-item__image">
+                            <img loading="lazy" src="./img/catalog/2.webp" alt="" class="card-item__img">
+                        </div>
+                        <div class="card-item__content">
+                            <h4 class="card-item__title">Романтический букет</h4>
+                            <div class="card-item__bottom">
+                                <p class="card-item__price">6 000 ₽</p>
+                                <button type="button" class="card-item__cart">
+                                    <span>В корзину</span>
+                                    <svg><use xlink:href="#basket"></use></svg>
+                                </button>
+                            </div>
+                        </div>
+                        <button type="button" class="card-item__like"><svg><use xlink:href="#heart"></use></svg></button>
+                    </a>
+                    <a href="#" class="card-item swiper-slide">
+                        <div class="card-item__image">
+                            <img loading="lazy" src="./img/catalog/4.webp" alt="" class="card-item__img">
+                        </div>
+                        <div class="card-item__content">
+                            <h4 class="card-item__title">Романтический букет с свечами</h4>
+                            <div class="card-item__bottom">
+                                <p class="card-item__price">6 000 ₽</p>
+                                <button type="button" class="card-item__cart">
+                                    <span>В корзину</span>
+                                    <svg><use xlink:href="#basket"></use></svg>
+                                </button>
+                            </div>
+                        </div>
+                        <button type="button" class="card-item__like"><svg><use xlink:href="#heart"></use></svg></button>
+                    </a>
+                    <a href="#" class="card-item swiper-slide">
+                        <div class="card-item__image">
+                            <img loading="lazy" src="./img/catalog/1.webp" alt="" class="card-item__img">
+                        </div>
+                        <div class="card-item__content">
+                            <h4 class="card-item__title">Романтический букет без свеч</h4>
+                            <div class="card-item__bottom">
+                                <p class="card-item__price">6 000 ₽</p>
+                                <button type="button" class="card-item__cart">
+                                    <span>В корзину</span>
+                                    <svg><use xlink:href="#basket"></use></svg>
+                                </button>
+                            </div>
+                        </div>
+                        <button type="button" class="card-item__like"><svg><use xlink:href="#heart"></use></svg></button>
+                    </a>
+                    <a href="#" class="card-item swiper-slide">
+                        <div class="card-item__image">
+                            <img loading="lazy" src="./img/catalog/3.webp" alt="" class="card-item__img">
+                        </div>
+                        <div class="card-item__content">
+                            <h4 class="card-item__title">Романтический букет с розами</h4>
+                            <div class="card-item__bottom">
+                                <p class="card-item__price">6 000 ₽</p>
+                                <button type="button" class="card-item__cart">
+                                    <span>В корзину</span>
+                                    <svg><use xlink:href="#basket"></use></svg>
+                                </button>
+                            </div>
+                        </div>
+                        <button type="button" class="card-item__like"><svg><use xlink:href="#heart"></use></svg></button>
+                    </a>
+                    <a href="#" class="card-item swiper-slide">
+                        <div class="card-item__image">
+                            <img loading="lazy" src="./img/catalog/1.webp" alt="" class="card-item__img">
+                        </div>
+                        <div class="card-item__content">
+                            <h4 class="card-item__title">Романтический букет без свеч</h4>
+                            <div class="card-item__bottom">
+                                <p class="card-item__price">6 000 ₽</p>
+                                <button type="button" class="card-item__cart">
+                                    <span>В корзину</span>
+                                    <svg><use xlink:href="#basket"></use></svg>
+                                </button>
+                            </div>
+                        </div>
+                        <button type="button" class="card-item__like"><svg><use xlink:href="#heart"></use></svg></button>
+                    </a>
+                </div>
+                <div class="catalog-row__navigation">
+                    <button type="button" class="catalog-row__navigation-btn catalog-row__navigation-btn_prev">
+                        <svg>
+                            <use xlink:href="#arrow-left"></use>
+                        </svg>
+                    </button>
+                    <button type="button" class="catalog-row__navigation-btn catalog-row__navigation-btn_next">
+                        <svg>
+                            <use xlink:href="#arrow-left"></use>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+@@include("_bottom.html")

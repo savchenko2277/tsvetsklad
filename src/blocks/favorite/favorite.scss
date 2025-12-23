@@ -1,0 +1,39 @@
+@use 'lib' as *;
+
+.favorite {
+	$self: &;
+
+	padding-top: 200px;
+	padding-bottom: fluid(120px, 60px);
+
+	&__container {
+
+	}
+
+	&__title {
+		margin-bottom: 36px;
+	}
+
+	&__items {
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		gap: 16px;
+
+		@include media("<=xxlg") {
+			grid-template-columns: repeat(3, 1fr);
+		}
+
+		@include media("<=lg") {
+			grid-template-columns: repeat(2, 1fr);
+		}
+
+		@include media("<=sm") {
+			grid-template-columns: 100%;
+		}
+
+		.card-item {
+			height: auto;
+		}
+	}
+
+}
