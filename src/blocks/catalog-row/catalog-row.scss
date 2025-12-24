@@ -27,15 +27,15 @@
 
 		flex-direction: row;
 		gap: 12px;
-		padding: 16px 24px;
+		padding: fluid(16px, 12px) fluid(24px, 20px);
 		background: var(--gray);
-		font-size: 18px;
+		font-size: fluid(18px, 14px);
 		font-weight: 700;
 		border-radius: 16px;
 
 		svg {
-			width: 24px;
-			height: 24px;
+			width: fluid(24px, 18px);
+			height: fluid(24px, 18px);
 			fill: transparent;
 			stroke: var(--gray-text);
 		}

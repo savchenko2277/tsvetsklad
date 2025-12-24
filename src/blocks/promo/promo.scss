@@ -6,6 +6,10 @@
 	padding-top: 200px;
 	padding-bottom: fluid(64px, 32px);
 
+	@include media("<=sm") {
+		padding-top: 120px;
+	}
+
 	&__container {
 
 	}
@@ -24,6 +28,11 @@
 			width: 100%;
 			height: 100%;
 			object-fit: cover;
+			object-position: 5% 50%;
+		}
+
+		@include media("<=md") {
+			aspect-ratio: 5 / 3;
 		}
 	}
 

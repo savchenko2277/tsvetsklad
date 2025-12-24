@@ -6,6 +6,10 @@
 	padding-top: 200px;
 	padding-bottom: fluid(120px, 60px);
 
+	@include media("<=sm") {
+		padding-top: 120px;
+	}
+
 	&__container {
 		display: grid;
 		grid-template-columns: minmax(300px, 560px) minmax(400px, 1fr);
