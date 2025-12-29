@@ -1,0 +1,79 @@
+@use 'lib' as *;
+
+.contacts {
+	$self: &;
+
+	padding-top: 200px;
+	padding-bottom: fluid(64px, 32px);
+
+	@include media("<=sm") {
+		padding-top: 120px;
+	}
+
+	&__container {
+
+	}
+
+	&__breadcumbs {
+		margin-bottom: fluid(32px, 24px);
+	}
+
+	&__title {
+		margin-bottom: fluid(48px, 32px);
+	}
+
+	&__columns {
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		gap: fluid(24px, 8px);
+
+		@include media("<=md") {
+			grid-template-columns: repeat(2, 1fr);
+		}
+
+		@include media("<=xs") {
+			grid-template-columns: 100%;
+		}
+	}
+
+	&__column {
+		background: var(--gray);
+		padding: fluid(24px, 16px);
+		border-radius: 16px;
+		display: flex;
+		flex-direction: column;
+		gap: 16px;
+	}
+
+	&__column-content {
+		font-size: 20px;
+		font-weight: 700;
+	}
+
+	&__column-title {
+		font-size: 14px;
+	}
+
+	&__column-time {
+		font-size: 14px;
+		display: flex;
+		flex-direction: column;
+		gap: 4px;
+	}
+
+	&__socials {
+
+	}
+
+	&__social {
+		svg {
+			width: 24px; height: 24px;
+			fill: var(--rose);
+		}
+	}
+
+	&__column-text {
+		font-size: 14px;
+	}
+
+}

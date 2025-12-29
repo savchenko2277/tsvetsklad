@@ -1,0 +1,58 @@
+@use 'lib' as *;
+
+.faq {
+	$self: &;
+
+	padding-top: 200px;
+	padding-bottom: fluid(64px, 32px);
+
+	@include media("<=sm") {
+		padding-top: 120px;
+	}
+
+	&__container {}
+
+	&__title {
+		margin-bottom: fluid(48px, 32px);
+	}
+
+	&__items {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: fluid(24px, 16px);
+
+		@include media("<=xs") {
+			grid-template-columns: 100%;
+		}
+	}
+
+	&__item {
+		background: var(--gray);
+		border-radius: 16px;
+		display: grid;
+		grid-template-rows: max-content 0fr;
+		transition: all var(--trans);
+
+		&.active {
+			grid-template-rows: max-content 1fr;
+
+			#{$self}__item-text {
+				padding-bottom: fluid(24px, 16px);
+			}
+		}
+	}
+
+	&__item-head {
+		font-weight: 700;
+		font-size: fluid(20px, 18px);
+		padding: fluid(24px, 16px);
+		cursor: pointer;
+	}
+
+	&__item-text {
+		overflow: hidden;
+		transition: all var(--trans);
+		padding: 0px fluid(24px, 16px) 0 fluid(24px, 16px);
+	}
+
+}

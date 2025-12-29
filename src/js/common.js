@@ -3,11 +3,12 @@ import "./polyfills.js";
 import "./blocks.js";
 import Swiper from "swiper";
 import { Autoplay, Pagination, Navigation } from "swiper/modules";
+import { Fancybox } from "@fancyapps/ui/dist/fancybox/";
 
 // Функции
 
 const setScroll = (value) => {
-	if(value === "disable") {
+	if (value === "disable") {
 		document.body.classList.add('disable-scroll');
 	} else {
 		document.body.classList.remove('disable-scroll');
@@ -129,7 +130,7 @@ const setPaymentForm = () => {
 
 const setHeaderCatalog = () => {
 	const header = document.querySelector('.header');
-	if(!header) return;
+	if (!header) return;
 
 	const headerModal = header.querySelector('.header__modal');
 	const headerCatalog = header.querySelector('.header__catalog');
@@ -150,6 +151,24 @@ const setHeaderCatalog = () => {
 	headerCatalogClose.addEventListener('click', closeCatalog);
 }
 
+const setGalleries = () => {
+	Fancybox.bind("[data-fancybox]", {
+		// Your custom options
+	});
+}
+
+const setAccordeons = () => {
+	const items = document.querySelectorAll('[data-accordeon]');
+
+	items.forEach(item => {
+		const head = item.querySelector('[data-accordeon-head]');
+
+		head.addEventListener('click', () => {
+			item.classList.toggle('active');
+		})
+	});
+}
+
 // Запуск функций
 document.addEventListener('DOMContentLoaded', () => {
 	updateVH();
@@ -158,4 +177,6 @@ document.addEventListener('DOMContentLoaded', () => {
 	detailScript();
 	setPaymentForm();
 	setHeaderCatalog();
+	setGalleries();
+	setAccordeons();
 })

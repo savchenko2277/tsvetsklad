@@ -1,0 +1,110 @@
+@use 'lib' as *;
+
+.shops {
+	$self: &;
+
+	padding: fluid(64px, 32px) 0;
+
+	&__container {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	&__title {
+		margin-bottom: fluid(48px, 32px);
+	}
+
+	&__map {
+		width: 100%;
+		aspect-ratio: 16 / 9;
+		border-radius: 16px;
+		overflow: hidden;
+		margin-bottom: 24px;
+
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+
+		@include media("<=xs") {
+			aspect-ratio: 1 / 1;
+		}
+	}
+
+	&__items {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		width: 100%;
+		gap: fluid(24px, 12px);
+
+		@include media("<=lg") {
+			grid-template-columns: repeat(2, 1fr);
+		}
+
+		@include media("<=sm") {
+			grid-template-columns: 100%;
+		}
+	}
+
+	&__item {
+		display: grid;
+		grid-template-columns: auto auto;
+		justify-content: space-between;
+		background: var(--gray);
+		border-radius: 16px;
+		padding: fluid(24px, 16px);
+		gap: 32px;
+	}
+
+	&__item-side {
+		display: flex;
+		flex-direction: column;
+		gap: 8px;
+	}
+
+	&__item-adreess {
+		font-size: 18px;
+		font-weight: 700;
+	}
+
+	&__item-contact {
+		font-weight: 500;
+	}
+
+	&__item-time {
+
+	}
+
+	&__item-buttons {
+		display: flex;
+		flex-direction: column;
+		gap: 8px;
+	}
+
+	&__item-button {
+
+		@include flex-center;
+		text-align: center;
+		background: var(--rose);
+		width: 100%;
+		padding: 10px 12px;
+		color: #ffffff;
+		font-weight: 700;
+		border-radius: 8px;
+		border: 1px solid transparent;
+		font-size: 14px;
+
+		&_second {
+			background: transparent;
+			color: var(--rose);
+			border-color: var(--rose);
+		}
+	}
+
+	&__gallery {
+		display: none;
+	}
+
+}

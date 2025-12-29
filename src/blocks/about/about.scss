@@ -1,0 +1,87 @@
+@use 'lib' as *;
+
+.about {
+	$self: &;
+
+	padding-top: 200px;
+	padding-bottom: fluid(64px, 32px);
+
+	@include media("<=sm") {
+		padding-top: 120px;
+	}
+
+	&__container {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		text-align: center;
+	}
+
+	&__breadcumbs {
+		margin-bottom: fluid(48px, 32px);
+	}
+
+	&__content {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	&__title {
+		margin-bottom: 32px;
+	}
+
+	&__text {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 24px;
+		line-height: 150%;
+		font-size: fluid(18px, 16px);
+		max-width: 780px;
+		margin-bottom: 48px;
+	}
+
+	&__items {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: center;
+		align-items: start;
+		gap: 48px 24px;
+		max-width: 1200px;
+	}
+
+	&__item {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		min-width: 320px;
+	}
+
+	&__item-value {
+		display: flex;
+		flex-direction: column;
+		font-size: 18px;
+		margin-bottom: 16px;
+
+		b {
+			font-size: fluid(48px, 32px);
+		}
+	}
+
+	&__item-text {
+		max-width: 320px;
+		font-size: 16px;
+	}
+
+	&__image {
+		aspect-ratio: 1 / 1;
+		width: 100%;
+		max-width: 180px;
+		margin-bottom: fluid(48px, 32px);
+		border-radius: 100%;
+	}
+
+}

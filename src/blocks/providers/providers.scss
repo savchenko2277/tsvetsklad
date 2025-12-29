@@ -1,0 +1,31 @@
+@use 'lib' as *;
+
+.providers {
+	$self: &;
+
+	padding: fluid(64px, 32px) 0;
+
+	&__container {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	&__title {
+		margin-bottom: fluid(48px, 32px);
+	}
+
+	&__text {
+		margin-bottom: 64px;
+		max-width: 920px;
+		text-align: center;
+		line-height: 150%;
+	}
+
+	&__map {
+		max-width: 1200px;
+		object-fit: contain;
+		width: 100%;
+	}
+
+}

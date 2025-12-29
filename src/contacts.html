@@ -1,0 +1,104 @@
+@@include("_head.html", {"id":"home"})
+@@include("_header.html")
+
+<main class="site-container">
+
+    <section class="contacts">
+        <div class="contacts__container container">
+            <ul class="contacts__breadcumbs breadcumbs">
+                <li class="breadcumbs__item"><a href="#">Главная</a></li>
+                <li class="breadcumbs__item"><a href="#">Контакты</a></li>
+            </ul>
+            <h1 class="contacts__title title">
+                Контакты
+            </h1>
+            <div class="contacts__columns">
+                <div class="contacts__column">
+                    <h4 class="contacts__column-title">Телефон</h4>
+                    <a href="#" class="contacts__column-content">+ 7 996 666-40-10</a>
+                    <div class="contacts__column-time">
+                        Время работы операторов:
+                        <b>с 8:00 до 21:00</b>
+                    </div>
+                </div>
+                <div class="contacts__column">
+                    <h4 class="contacts__column-title">E-mail:</h4>
+                    <a href="#" class="contacts__column-content">Info@Cvety24.ru</a>
+                    <div class="contacts__socials">
+                        <a href="#" class="contacts__social">
+                            <svg><use xlink:href="#tg"></use></svg>
+                        </a>
+                        <a href="#" class="contacts__social">
+                            <svg><use xlink:href="#wa"></use></svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="contacts__column">
+                    <p class="contacts__column-content">
+                        ИП Алиев Эмиль Алигасан оглы
+                    </p>
+                    <p class="contacts__column-text">
+                        ОГРНИП: 318774600694508 ИНН: 773014268014 ОКВЭД: 47.76
+                    </p>
+                </div>
+                <div class="contacts__column">
+                    <h4 class="contacts__column-title">Адрес:</h4>
+                    <a href="#" class="contacts__column-content">г. Москва, ул. Бакунинская, 26-30с1</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="shops">
+        <div class="shops__container container">
+            <h2 class="shops__title title">
+                Адреса магазинов
+            </h2>
+            <div class="shops__map">
+                <img src="./img/catalog/1.webp" alt="">
+            </div>
+            <div class="shops__items">
+                <div class="shops__item">
+                    <div class="shops__item-side">
+                        <p class="shops__item-adreess">Москва, Ленинский проспект 7</p>
+                        <a href="#" class="shops__item-contact">+7 901 590-48-51</a>
+                        <p class="shops__item-time">Круглосуточно</p>
+                    </div>
+                    <div class="shops__item-buttons">
+                        <a href="#" data-fancybox-delegate="shop-1" data-fancybox-index="0"
+                            class="shops__item-button">Фото магазина</a>
+                        <a href="#" class="shops__item-button shops__item-button_second">Как пройти</a>
+                    </div>
+                </div>
+                <div class="shops__item">
+                    <div class="shops__item-side">
+                        <p class="shops__item-adreess">Москва, Ленинский проспект 7</p>
+                        <a href="#" class="shops__item-contact">+7 901 590-48-51</a>
+                        <p class="shops__item-time">Круглосуточно</p>
+                    </div>
+                    <div class="shops__item-buttons">
+                        <a href="#" class="shops__item-button">Фото магазина</a>
+                        <a href="#" class="shops__item-button shops__item-button_second">Как пройти</a>
+                    </div>
+                </div>
+                <div class="shops__item">
+                    <div class="shops__item-side">
+                        <p class="shops__item-adreess">Москва, Ленинский проспект 7</p>
+                        <a href="#" class="shops__item-contact">+7 901 590-48-51</a>
+                        <p class="shops__item-time">Круглосуточно</p>
+                    </div>
+                    <div class="shops__item-buttons">
+                        <a href="#" class="shops__item-button">Фото магазина</a>
+                        <a href="#" class="shops__item-button shops__item-button_second">Как пройти</a>
+                    </div>
+                </div>
+            </div>
+            <div class="shops__gallery">
+                <img data-fancybox="shop-1" src="./img/catalog/1.webp" alt="">
+            </div>
+        </div>
+    </section>
+
+</main>
+
+@@include("_bottom.html")

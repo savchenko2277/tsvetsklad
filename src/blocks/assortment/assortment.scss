@@ -1,0 +1,63 @@
+@use 'lib' as *;
+
+.assortment {
+	$self: &;
+
+	padding: fluid(64px, 32px) 0;
+
+	&__container {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	&__title {
+		margin-bottom: fluid(48px, 32px);
+		text-align: center;
+		max-width: 460px;
+	}
+
+	&__image {
+		aspect-ratio: 1 / 1;
+		width: 100%;
+		max-width: 180px;
+		margin-bottom: fluid(48px, 32px);
+		border-radius: 100%;
+	}
+
+	&__items {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: fluid(32px, 24px);
+		max-width: 1200px;
+
+		@include media("<=md") {
+			grid-template-columns: repeat(2, 1fr);
+		}
+
+		@include media("<=xs") {
+			grid-template-columns: 100%;
+		}
+	}
+
+	&__item {
+		display: grid;
+		grid-template-columns: minmax(40px, auto) 1fr;
+		align-items: start;
+		text-align: start;
+		gap: 24px;
+	}
+
+	&__item-value {
+		font-size: fluid(48px, 32px);
+		margin-bottom: 24px;
+		color: var(--rose);
+		line-height: 100%;
+	}
+
+	&__item-text {
+		font-weight: 500;
+		line-height: 150%;
+	}
+
+}
