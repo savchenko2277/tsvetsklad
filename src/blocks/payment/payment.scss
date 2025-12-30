@@ -13,14 +13,22 @@
 
 	&__form {
 		display: grid;
+		grid-template-columns: repeat(2, 1fr);
 		gap: 48px;
+		position: relative;
+
+		@include media("<=lg") {
+			grid-template-columns: 100%;
+		}
 	}
 
 	&__info {
 		display: grid;
 		grid-template-columns: repeat(2, 1fr);
 		gap: 16px;
-		max-width: 720px;
+		height: fit-content;
+		position: sticky;
+		top: 200px; left: 0;
 
 		textarea {
 			grid-column: span 2;
@@ -30,6 +38,11 @@
 			@include media("<=xs") {
 				grid-column: span 2;
 			}
+		}
+
+		@include media("<=lg") {
+			position: static;
+			top: 0;
 		}
 	}
 
@@ -42,7 +55,7 @@
 
 	&__input {
 		background: var(--gray);
-		padding: 12px 24px;
+		padding: 20px 32px;
 		border-radius: 16px;
 		font-size: 18px;
 	}
@@ -62,7 +75,7 @@
 	}
 
 	&__delivery {
-
+		grid-column: 1 / span 1;
 	}
 
 	&__delivery-title {
@@ -110,7 +123,7 @@
 		display: grid;
 		grid-template-columns: repeat(2, 1fr);
 		gap: 12px;
-		max-width: 460px;
+		grid-column: 1 / span 1;
 
 		@include media("<=xs") {
 			max-width: none;
@@ -185,6 +198,10 @@
 		b {
 			font-weight: 700;
 		}
+	}
+
+	&__bottom {
+		grid-column: 1 / span 2;
 	}
 
 }

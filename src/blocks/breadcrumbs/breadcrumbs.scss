@@ -1,16 +1,24 @@
 @use 'lib' as *;
 
-.breadcumbs {
+.breadcrumbs {
 	$self: &;
 
 	display: flex;
 	flex-direction: row;
 	align-items: center;
+	margin-bottom: 32px;
+	flex-wrap: wrap;
+	gap: 4px 0px;
+
+	&_about {
+		justify-content: center;
+	}
 
 	&__item {
 		font-size: 14px;
 		font-weight: 500;
 		transition: all var(--trans);
+		text-wrap: nowrap;
 
 		&:hover {
 			opacity: 0.8;

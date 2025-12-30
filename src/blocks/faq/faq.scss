@@ -3,12 +3,7 @@
 .faq {
 	$self: &;
 
-	padding-top: 200px;
 	padding-bottom: fluid(64px, 32px);
-
-	@include media("<=sm") {
-		padding-top: 120px;
-	}
 
 	&__container {}
 

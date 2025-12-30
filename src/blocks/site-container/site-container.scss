@@ -3,4 +3,10 @@
 .site-container {
 	$self: &;
 
+	padding-top: 200px;
+
+	@include media("<=sm") {
+		padding-top: 120px;
+	}
+
 }

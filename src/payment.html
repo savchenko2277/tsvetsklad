@@ -2,19 +2,18 @@
 @@include("_header.html")
 
 <main class="site-container">
+
+    <ul class="breadcrumbs container">
+        <li class="breadcrumbs__item"><a href="#">Главная</a></li>
+        <li class="breadcrumbs__item"><a href="#">Страница оплаты</a></li>
+    </ul>
+
     <section class="payment basket">
         <div class="payment__container container">
             <h2 class="payment__title title">
                 Страница оплаты
             </h2>
             <form class="payment__form">
-                <div class="payment__info">
-                    <input placeholder="Ваше имя" type="text" class="payment__input">
-                    <input placeholder="Ваша фамилия" type="text" class="payment__input">
-                    <input placeholder="Телефон отправителя" type="tel" class="payment__input">
-                    <input placeholder="Ваша почта" type="email" class="payment__input">
-                    <textarea placeholder="Примечание к заказу" type="text" class="payment__input"></textarea>
-                </div>
                 <div class="payment__show">
                     <h2 class="payment__items-title">Ваша корзина</h2>
                     <div class="payment__items basket__items">
@@ -33,6 +32,19 @@
                             <h4 class="basket__item-title">Романтический букет</h4>
                             <p class="basket__item-price">6 000 ₽</p>
                         </div>
+                    </div>
+                </div>
+                <div class="payment__info">
+                    <input placeholder="Ваше имя" type="text" class="payment__input">
+                    <input placeholder="Ваша фамилия" type="text" class="payment__input">
+                    <input placeholder="Телефон отправителя" type="tel" class="payment__input">
+                    <input placeholder="Ваша почта" type="email" class="payment__input">
+                    <textarea placeholder="Примечание к заказу" type="text" class="payment__input"></textarea>
+                    <div class="payment__bottom">
+                        <p class="payment__price">
+                            К оплате: <b>17 600 ₽</b> (товары <b>16 600 ₽</b> + доставка <b>1 000 ₽</b>)
+                        </p>
+                        <button type="submit" class="payment__button">Оформить заказ</button>
                     </div>
                 </div>
                 <div class="payment__delivery">
@@ -75,12 +87,6 @@
                         <img src="./img/cash.webp" alt="">
                         <span>Наличные</span>
                     </label>
-                </div>
-                <div class="payment__bottom">
-                    <p class="payment__price">
-                        К оплате: <b>17 600 ₽</b> (товары <b>16 600 ₽</b> + доставка <b>1 000 ₽</b>)
-                    </p>
-                    <button type="submit" class="payment__button">Оформить заказ</button>
                 </div>
             </form>
         </div>
