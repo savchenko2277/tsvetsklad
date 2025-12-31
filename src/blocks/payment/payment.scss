@@ -3,9 +3,7 @@
 .payment {
 	$self: &;
 
-	&__container {
-
-	}
+	&__container {}
 
 	&__title {
 		margin-bottom: 32px;
@@ -28,7 +26,10 @@
 		gap: 16px;
 		height: fit-content;
 		position: sticky;
-		top: 200px; left: 0;
+		top: 200px;
+		left: 0;
+		grid-column: 2 / span 1;
+		grid-row: 1 / span 1;
 
 		textarea {
 			grid-column: span 2;
@@ -42,6 +43,9 @@
 
 		@include media("<=lg") {
 			position: static;
+			order: -1;
+			grid-row: 2 / span 1;
+			grid-column: 1 / span 1;
 			top: 0;
 		}
 	}
@@ -61,7 +65,7 @@
 	}
 
 	&__show {
-
+		grid-column: span 2;
 	}
 
 	&__items-title {
@@ -90,6 +94,7 @@
 		gap: 12px;
 		max-width: 240px;
 		margin-bottom: 24px;
+		height: fit-content;
 
 		@include media("<=xs") {
 			max-width: none;
@@ -115,15 +120,14 @@
 		}
 	}
 
-	&__courier {
-		
-	}
+	&__courier {}
 
 	&__types {
 		display: grid;
 		grid-template-columns: repeat(2, 1fr);
 		gap: 12px;
 		grid-column: 1 / span 1;
+		height: fit-content;
 
 		@include media("<=xs") {
 			max-width: none;
@@ -171,8 +175,7 @@
 		}
 	}
 
-	&__lists {
-	}
+	&__lists {}
 
 	&__list {
 		display: none;
@@ -181,6 +184,7 @@
 		stroke: none;
 		border: none;
 		outline: none;
+
 		&.active {
 			display: block;
 		}
@@ -202,6 +206,12 @@
 
 	&__bottom {
 		grid-column: 1 / span 2;
+	}
+
+	&__column {
+		display: flex;
+		flex-direction: column;
+		gap: 48px;
 	}
 
 }

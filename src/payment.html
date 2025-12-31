@@ -14,23 +14,25 @@
                 Страница оплаты
             </h2>
             <form class="payment__form">
-                <div class="payment__show">
-                    <h2 class="payment__items-title">Ваша корзина</h2>
-                    <div class="payment__items basket__items">
-                        <div class="basket__item">
-                            <img src="./img/catalog/1.webp" alt="" class="basket__item-img">
-                            <h4 class="basket__item-title">Романтический букет</h4>
-                            <p class="basket__item-price">6 000 ₽</p>
-                        </div>
-                        <div class="basket__item">
-                            <img src="./img/catalog/2.webp" alt="" class="basket__item-img">
-                            <h4 class="basket__item-title">Романтический букет</h4>
-                            <p class="basket__item-price">6 000 ₽</p>
-                        </div>
-                        <div class="basket__item">
-                            <img src="./img/catalog/3.webp" alt="" class="basket__item-img">
-                            <h4 class="basket__item-title">Романтический букет</h4>
-                            <p class="basket__item-price">6 000 ₽</p>
+                <div class="payment__column">
+                    <div class="payment__show">
+                        <h2 class="payment__items-title">Ваша корзина</h2>
+                        <div class="payment__items basket__items">
+                            <div class="basket__item">
+                                <img src="./img/catalog/1.webp" alt="" class="basket__item-img">
+                                <h4 class="basket__item-title">Романтический букет</h4>
+                                <p class="basket__item-price">6 000 ₽</p>
+                            </div>
+                            <div class="basket__item">
+                                <img src="./img/catalog/2.webp" alt="" class="basket__item-img">
+                                <h4 class="basket__item-title">Романтический букет</h4>
+                                <p class="basket__item-price">6 000 ₽</p>
+                            </div>
+                            <div class="basket__item">
+                                <img src="./img/catalog/3.webp" alt="" class="basket__item-img">
+                                <h4 class="basket__item-title">Романтический букет</h4>
+                                <p class="basket__item-price">6 000 ₽</p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -40,53 +42,53 @@
                     <input placeholder="Телефон отправителя" type="tel" class="payment__input">
                     <input placeholder="Ваша почта" type="email" class="payment__input">
                     <textarea placeholder="Примечание к заказу" type="text" class="payment__input"></textarea>
+                    <div class="payment__delivery">
+                        <h2 class="payment__delivery-title">Доставка</h2>
+                        <div class="payment__delivery-types">
+                            <label class="payment__delivery-type">
+                                <input type="radio" name="delivery" value="true" checked>
+                                <span>Курьером</span>
+                            </label>
+                            <label class="payment__delivery-type">
+                                <input type="radio" name="delivery" value="false">
+                                <span>Самовывоз</span>
+                            </label>
+                        </div>
+                        <div class="payment__lists">
+                            <select class="payment__list payment__list_courier" name="time">
+                                <option value="">Выберите время доставки</option>
+                                <option value="petersburg">12:00</option>
+                                <option value="samara">13:00</option>
+                                <option value="perm">14:00</option>
+                                <option value="novosibirsk">15:00</option>
+                            </select>
+                            <select class="payment__list payment__list_address" name="address">
+                                <option value="">Выберите адрес для самовывоза</option>
+                                <option value="petersburg">Санкт-Петербург</option>
+                                <option value="samara">Самара</option>
+                                <option value="perm">Пермь</option>
+                                <option value="novosibirsk">Новосибирск</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="payment__types">
+                        <label class="payment__type">
+                            <input name="typepayment" value="online" type="radio" checked>
+                            <img src="./img/card.webp" alt="">
+                            <span>Оплата онлайн</span>
+                        </label>
+                        <label class="payment__type">
+                            <input name="typepayment" value="cash" type="radio">
+                            <img src="./img/cash.webp" alt="">
+                            <span>Наличные</span>
+                        </label>
+                    </div>
                     <div class="payment__bottom">
                         <p class="payment__price">
                             К оплате: <b>17 600 ₽</b> (товары <b>16 600 ₽</b> + доставка <b>1 000 ₽</b>)
                         </p>
                         <button type="submit" class="payment__button">Оформить заказ</button>
                     </div>
-                </div>
-                <div class="payment__delivery">
-                    <h2 class="payment__delivery-title">Доставка</h2>
-                    <div class="payment__delivery-types">
-                        <label class="payment__delivery-type">
-                            <input type="radio" name="delivery" value="true" checked>
-                            <span>Курьером</span>
-                        </label>
-                        <label class="payment__delivery-type">
-                            <input type="radio" name="delivery" value="false">
-                            <span>Самовывоз</span>
-                        </label>
-                    </div>
-                    <div class="payment__lists">
-                        <select class="payment__list payment__list_courier" name="time">
-                            <option value="">Выберите время доставки</option>
-                            <option value="petersburg">12:00</option>
-                            <option value="samara">13:00</option>
-                            <option value="perm">14:00</option>
-                            <option value="novosibirsk">15:00</option>
-                        </select>
-                        <select class="payment__list payment__list_address" name="address">
-                            <option value="">Выберите адрес для самовывоза</option>
-                            <option value="petersburg">Санкт-Петербург</option>
-                            <option value="samara">Самара</option>
-                            <option value="perm">Пермь</option>
-                            <option value="novosibirsk">Новосибирск</option>
-                        </select>
-                    </div>
-                </div>
-                <div class="payment__types">
-                    <label class="payment__type">
-                        <input name="typepayment" value="online" type="radio" checked>
-                        <img src="./img/card.webp" alt="">
-                        <span>Оплата онлайн</span>
-                    </label>
-                    <label class="payment__type">
-                        <input name="typepayment" value="cash" type="radio">
-                        <img src="./img/cash.webp" alt="">
-                        <span>Наличные</span>
-                    </label>
                 </div>
             </form>
         </div>
